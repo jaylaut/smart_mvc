@@ -3,6 +3,7 @@ package org.smart4.framework.bean;
 import java.util.Map;
 
 import org.smart4.framework.util.CaseUtil;
+import org.smart4.framework.util.CollectionUtil;
 
 /** 
 * @ClassName: Param 
@@ -43,5 +44,17 @@ public class Param {
 	*/
 	public Map<String,Object> getMap(){
 		return paramMap;
+	}
+	
+	/** 
+	* @Title: isEmpty 
+	* @Description: 校验参数是否为空
+	* @param @return    
+	* @return boolean   
+	* @throws 
+	* @author
+	*/
+	public boolean isEmpty(){
+		return CollectionUtil.isEmpty(paramMap);
 	}
 }
